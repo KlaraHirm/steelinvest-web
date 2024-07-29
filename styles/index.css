@@ -16,6 +16,7 @@
     background-color: #FF7F00;
     color: #fff;
     font-weight: 600;
+    font-size: large;
 }
 
 .section {
@@ -33,6 +34,10 @@
     width: 25%;
     height: 0;
     border-top: 2px solid #FF7F00;
+}
+
+.contact-info {
+    margin: 35px;
 }
 
 .section .contact-info p {
