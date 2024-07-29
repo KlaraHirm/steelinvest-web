@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steelinvest</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../responsive-circle-infographic/src/s8CyrcleInfoBox.css">
+    <script src="../responsive-circle-infographic/src/s8CyrcleInfoBox.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Steelinvest</h1>
+            <div class="language-selector">
+                <a href="../ru/index.html">RU</a>
+                <span>|</span>
+                <a href="../en/index.html" class="active">EN</a>
+                <span>|</span>
+                <a href="../sk/index.html">SK</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="awards.html">AWARDS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="products.html">PRODUCTS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="infographic">
+            <ul class="circleWrapper wStyle">
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f1">
+                  Al
+                </div>
+                <div class="circleBox" id="f1">
+                  Info 1
+                </div>
+              </li>
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f2">
+                  Zn
+                </div>
+                <div class="circleBox" id="f2">
+                  Info 2
+                </div>
+              </li>
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f3">
+                  Sn
+                </div>
+                <div class="circleBox" id="f3">
+                  Info 3
+                </div>
+              </li>
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f4">
+                  Ni
+                </div>
+                <div class="circleBox" id="f4">
+                  Info 4
+                </div>
+              </li>
+            </ul>
+          </div>
+        <div class="content">
+            <section class="subtitle-section">
+                <h2>Steelinvest, s.r.o.</h2>
+                <p>Welcome to Steelinvest, your reliable partner in supplying aluminum, zinc, nickel, tin, and other metals.</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Letná 11/45, 040 01 Košice, Slovakia</p>
+                    <p><i class="fas fa-phone"></i> +421 905 701 215</p>
+                    <p><i class="fas fa-envelope"></i> steelinvest@steelinvest.eu</p>
+                </div>
+            </section>
+            <section class="certificate-section">
+              <h2>Certificate</h2>
+              <div class="certificate-content">
+                <img src="../images/ISO9001.jpeg" alt="Certifikát">
+                <p>Our company is certified to meet international standards of quality and reliability. Steelinvest has been awarded the prestigious ISO 9001 certification for stockholding and supply of non-ferrous metals. This certification demonstrates our commitment to providing consistent quality products and services, ensuring customer satisfaction, and continuously improving our processes. Our adherence to ISO 9001 standards guarantees that our operations meet the highest levels of efficiency and effectiveness.</p>
+              </div>  
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Steelinvest s.r.o. All rights reserved.</p>
+    </footer>
+
+    <script>
+       $(function(){ 
+            $(".infographic").s8CircleInfoBox({
+                spreadStyle:"top",
+            });
+        });
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steelinvest</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../responsive-circle-infographic/src/s8CyrcleInfoBox.css">
+    <script src="../responsive-circle-infographic/src/s8CyrcleInfoBox.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="../images/SteelInvestCMYK-removebg.png" alt="Steelinvest logo">
+            <div class="language-selector">
+                <a href="../ru/index.html">RU</a>
+                <span>|</span>
+                <a href="../en/index.html">EN</a>
+                <span>|</span>
+                <a href="../sk/index.html" class="active">SK</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">DOMOV</a></li>
+            <li><a href="onas.html">O NÁS</a></li>
+            <li><a href="sluzby.htm">SLUŽBY</a></li>
+            <li><a href="ocenenia.html">OCENENIA</a></li>
+            <li><a href="kontakt.htm">KONTAKT</a></li>
+            <li><a href="ponuka.htm">PRODUKTY</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="infographic">
+            <ul class="circleWrapper wStyle">
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f1">
+                  Al
+                </div>
+                <div class="circleBox" id="f1">
+                  Info 1
+                </div>
+              </li>
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f2">
+                  Zn
+                </div>
+                <div class="circleBox" id="f2">
+                  Info 2
+                </div>
+              </li>
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f3">
+                  Sn
+                </div>
+                <div class="circleBox" id="f3">
+                  Info 3
+                </div>
+              </li>
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f4">
+                  Ni
+                </div>
+                <div class="circleBox" id="f4">
+                  Info 4
+                </div>
+              </li>
+            </ul>
+          </div>
+        <div class="content">
+            <section class="subtitle-section">
+                <h3>STEELINVEST, S.R.O.</h3>
+                <p>Vitajte na stránke Steelinvest, s.r.o., váš spoľahlivý partner v dodávkach hliníka, zinku, niklu, cínu a ďalších kovov.</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Letná 11/45, 040 01 Košice, Slovensko</p>
+                    <p><i class="fas fa-phone"></i> +421 905 701 215</p>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:steelinvest@steelinvest.eu" style="color: #373A40;">steelinvest@steelinvest.eu</a></p>
+                </div>
+            </section>
+            <section class="certificate-section">
+              <h3>CERTIFIKÁT</h3>
+              <div class="certificate-content">
+                <img src="../images/ISO9001.jpeg" alt="Certifikát">
+                <p>Naša spoločnosť je certifikovaná na splnenie medzinárodných štandardov kvality a spoľahlivosti. Steelinvest získal prestížny certifikát ISO 9001 pre skladovanie a dodávku neželezných kovov. Tento certifikát preukazuje našu oddanosť poskytovaniu konzistentne kvalitných produktov a služieb, zaisťovaniu spokojnosti zákazníkov a neustálemu zlepšovaniu našich procesov. Naše dodržiavanie noriem ISO 9001 zaručuje, že naše operácie spĺňajú najvyššie úrovne efektívnosti a účinnosti.</p>
+              </div>  
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Steelinvest s.r.o. Všetky práva vyhradené.</p>
+    </footer>
+
+    <script>
+       $(function(){ 
+            $(".infographic").s8CircleInfoBox({
+                spreadStyle:"top",
+            });
+        });
+      </script>
+</body>
+
+</html>

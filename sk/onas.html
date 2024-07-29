@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steelinvest - O NÁS</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country'],
+          ['Thailand'],
+          ['Japan'],
+          ['Taiwan'],
+          ['United Arab Emirates'],
+          ['Ukraine'],
+          ['China'],
+          ['Poland'],
+          ['South Korea'],
+          ['Russia'],
+          ['Indonesia'],
+          ['India'],
+          ['Georgia']
+        ]);
+
+        var options = {
+          backgroundColor: 'white',
+          datalessRegionColor: '#e8e8e8',
+          defaultColor: '#FF7F00',
+          colorAxis: { colors: ['#FF7F00', '#FF7F00'] },
+          legend: 'none'
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="../images/SteelInvestCMYK-removebg.png" alt="Steelinvest logo">
+            <div class="language-selector">
+                <a href="../ru/index.html">RU</a>
+                <span>|</span>
+                <a href="../en/index.html">EN</a>
+                <span>|</span>
+                <a href="../sk/index.html" class="active">SK</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">DOMOV</a></li>
+            <li><a href="onas.html" class="active">O NÁS</a></li>
+            <li><a href="sluzby.htm">SLUŽBY</a></li>
+            <li><a href="ocenenia.html">OCENENIA</a></li>
+            <li><a href="kontakt.htm">KONTAKT</a></li>
+            <li><a href="ponuka.htm">PRODUKTY</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="about-us">
+            <h1>O NÁS</h1>
+            <div id="regions_div" style="width: 900px; height: 500px;"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Steelinvest s.r.o. Všetky práva vyhradené.</p>
+    </footer>
+</body>
+
+</html>
