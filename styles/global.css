@@ -92,7 +92,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 120px; /* Adds space to avoid content being hidden behind fixed header and nav */
+    margin-top: 70px;
 }
 
 main .content {
