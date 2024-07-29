@@ -1,0 +1,82 @@
+.section {
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 95px; 
+    position: relative;
+}
+
+.section::before{ 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 0;
+    border-top: 2px solid #FF7F00;
+}
+
+.section.onas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/industry.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.partners-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.standards-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ff8000cc;
+    padding: 2%;
+}
+
+.standards-content img {
+    width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .standards-content {
+        flex-direction: column;
+    }
+
+    .standards-content img {
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent; /* Adjust color as needed */
+    border: 2px solid #FF7F00;
+    color: #FF7F00;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #e67000; /* Darker color on hover */
+}

@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255);
     padding: 10px 0;
     position: fixed; /* Fixes the header at the top */
     width: 100%; /* Ensures the header spans the entire width of the page */
@@ -54,12 +54,11 @@ header {
 }
 
 nav {
-    background-color: #ff8000ad; /* Polopriehľadné oranžové pozadie */
+    background-color: #ff8000ad;
     padding: 10px 0;
-    position: fixed; /* Fixes the nav bar at the top */
-    width: 100%; /* Ensures the nav bar spans the entire width of the page */
-    top: 70px; /* Adjusts the top position to be below the header */
-    z-index: 1000000000; /* Ensures the nav bar stays above other elements */
+    position: relative;
+    width: 100%;
+    top: 70px;
 }
 
 nav ul {
@@ -98,14 +97,59 @@ main {
 
 main .content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
-    color: #373A40; /* Tmavosivá farba textu pre hlavný obsah */
+    color: #373A40;
+}
+
+h4 {
+    text-align: right;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 400;
+    text-align: left;
+    margin: 35px;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: height 2s ease, transform 2s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer {
-    background-color: #333333; /* Tmavosivá farba pozadia */
-    color: #EEEEEE; /* Svetlosivá farba textu */
+    background-color: #333333;
+    color: #EEEEEE;
     text-align: center;
     padding: 5px 0;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #FF7F00;
+    color: #FF7F00;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #e67000;
 }
