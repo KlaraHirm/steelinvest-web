@@ -58,25 +58,3 @@
         max-width: 100%;
     }
 }
-
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    background-color: transparent; /* Adjust color as needed */
-    border: 2px solid #FF7F00;
-    color: #FF7F00;
-    text-align: center;
-    line-height: 40px;
-    font-size: 24px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none; /* Initially hidden */
-    z-index: 1000;
-}
-
-.scroll-to-top:hover {
-    background-color: #e67000; /* Darker color on hover */
-}
