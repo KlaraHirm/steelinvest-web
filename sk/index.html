@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steelinvest</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -77,20 +77,20 @@
             </ul>
           </div>
         <div class="content">
-            <section class="subtitle-section">
-                <h3>STEELINVEST, S.R.O.</h3>
-                <p>Vitajte na stránke Steelinvest, s.r.o., váš spoľahlivý partner v dodávkach hliníka, zinku, niklu, cínu a ďalších kovov.</p>
+            <section class="subtitle-section hidden">
+                <h4>STEELINVEST, S.R.O.</h4>
+                <h2>Vitajte na stránke Steelinvest, s.r.o., váš spoľahlivý partner v dodávkach hliníka, zinku, niklu, cínu a ďalších kovov.</h2>
                 <div class="contact-info">
                     <p><i class="fas fa-map-marker-alt"></i> Letná 11/45, 040 01 Košice, Slovensko</p>
                     <p><i class="fas fa-phone"></i> +421 905 701 215</p>
                     <p><i class="fas fa-envelope"></i><a href="mailto:steelinvest@steelinvest.eu" style="color: #373A40;">steelinvest@steelinvest.eu</a></p>
                 </div>
             </section>
-            <section class="certificate-section">
-              <h3>CERTIFIKÁT</h3>
+            <section class="certificate-section hidden">
+              <h4>CERTIFIKÁT</h4>
               <div class="certificate-content">
                 <img src="../images/ISO9001.jpeg" alt="Certifikát">
-                <p>Naša spoločnosť je certifikovaná na splnenie medzinárodných štandardov kvality a spoľahlivosti. Steelinvest získal prestížny certifikát ISO 9001 pre skladovanie a dodávku neželezných kovov. Tento certifikát preukazuje našu oddanosť poskytovaniu konzistentne kvalitných produktov a služieb, zaisťovaniu spokojnosti zákazníkov a neustálemu zlepšovaniu našich procesov. Naše dodržiavanie noriem ISO 9001 zaručuje, že naše operácie spĺňajú najvyššie úrovne efektívnosti a účinnosti.</p>
+                <h2>Naša spoločnosť je certifikovaná na splnenie medzinárodných štandardov kvality a spoľahlivosti. Steelinvest získal prestížny certifikát ISO 9001 pre skladovanie a dodávku neželezných kovov. Tento certifikát preukazuje našu oddanosť poskytovaniu konzistentne kvalitných produktov a služieb, zaisťovaniu spokojnosti zákazníkov a neustálemu zlepšovaniu našich procesov. Naše dodržiavanie noriem ISO 9001 zaručuje, že naše operácie spĺňajú najvyššie úrovne efektívnosti a účinnosti.</h2>
               </div>  
             </section>
         </div>
@@ -104,6 +104,21 @@
        $(function(){ 
             $(".infographic").s8CircleInfoBox({
                 spreadStyle:"top",
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    } else {
+                        entry.target.classList.remove("visible");
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll(".hidden").forEach(section => {
+                observer.observe(section);
             });
         });
       </script>

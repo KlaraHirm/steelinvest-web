@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255);
     padding: 10px 0;
     position: fixed; /* Fixes the header at the top */
     width: 100%; /* Ensures the header spans the entire width of the page */
@@ -54,12 +54,11 @@ header {
 }
 
 nav {
-    background-color: #ff8000ad; /* Polopriehľadné oranžové pozadie */
+    background-color: #ff8000ad;
     padding: 10px 0;
-    position: fixed; /* Fixes the nav bar at the top */
-    width: 100%; /* Ensures the nav bar spans the entire width of the page */
-    top: 70px; /* Adjusts the top position to be below the header */
-    z-index: 1000000000; /* Ensures the nav bar stays above other elements */
+    position: relative;
+    width: 100%;
+    top: 70px;
 }
 
 nav ul {
@@ -94,13 +93,6 @@ nav ul li a:hover {
 
 main {
     padding-top: 120px; /* Adds space to avoid content being hidden behind fixed header and nav */
-}
-
-main .content {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: #373A40; /* Tmavosivá farba textu pre hlavný obsah */
 }
 
 footer {

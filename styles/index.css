@@ -1,12 +1,57 @@
-.subtitle-section, .certificate-section {
-    border-top: 2px solid #FF7F00; /* Oranžový okraj */
-    padding: 10px; 
-    background-color: #e8e8e8; /* Svetlosivá farba pozadia */
-    flex: 1; /* Zabezpečuje, že sekcie zaberajú rovnaký priestor */
+.infographic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
 }
 
-.subtitle-section {
-    border-right: 2px solid #FF7F00;
+.wStyle {
+    border: 3px dashed #FF7F00;
+}
+
+.fStyle {
+    background-color: #FF7F00;
+    color: #fff;
+    font-weight: 600;
+}
+
+main .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #373A40;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.subtitle-section, .certificate-section {
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 95px; 
+    position: relative;
+}
+
+.subtitle-section::before, .certificate-section::before{ 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 0;
+    border-top: 2px solid #FF7F00;
 }
 
 .subtitle-section .contact-info p {
@@ -22,33 +67,22 @@
 }
 
 .certificate-content img {
-    height: auto; /* Adjust height to auto for flexibility */
+    height: auto;
     max-width: 25%;
-    object-fit: cover; /* Maintain aspect ratio */
+    object-fit: cover;
 }
 
-.certificate-content p {
+.certificate-content h2 {
+    margin-top: 0;
+}
+
+h4 {
+    text-align: right;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 400;
     text-align: left;
-    margin: 0;
-    padding: 0;
-}
-
-.infographic {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 40%; /* Adjust width of the entire infographic */
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.wStyle {
-    border: 3px dashed #FF7F00;
-}
-
-.fStyle {
-    background-color: #FF7F00;
-    color: #fff;
-    font-weight: 600;
+    margin: 35px;
 }
