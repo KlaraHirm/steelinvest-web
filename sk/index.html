@@ -40,61 +40,64 @@
     </nav>
 
     <main>
-        <div class="infographic">
+      <div class="content">
+          <section class="section hidden">
+              <h4>STEELINVEST, S.R.O.</h4>
+              <h2>Vitajte na stránke Steelinvest, s.r.o., váš spoľahlivý partner v dodávkach hliníka, zinku, niklu, cínu a ďalších kovov.</h2>
+              <div class="contact-info">
+                  <p><i class="fas fa-map-marker-alt"></i> Letná 11/45, 040 01 Košice, Slovensko</p>
+                  <p><i class="fas fa-phone"></i> +421 905 701 215</p>
+                  <p><i class="fas fa-envelope"></i><a href="mailto:steelinvest@steelinvest.eu" style="color: #373A40;">steelinvest@steelinvest.eu</a></p>
+              </div>
+          </section>
+          <div class="infographic hidden">
             <ul class="circleWrapper wStyle">
-              <li>
-                <div class="circleFeature fStyle" data-cyrcleBox="f1">
-                  Al
-                </div>
-                <div class="circleBox" id="f1">
-                  Info 1
-                </div>
-              </li>
-              <li>
-                <div class="circleFeature fStyle" data-cyrcleBox="f2">
-                  Zn
-                </div>
-                <div class="circleBox" id="f2">
-                  Info 2
-                </div>
-              </li>
-              <li>
-                <div class="circleFeature fStyle" data-cyrcleBox="f3">
-                  Sn
-                </div>
-                <div class="circleBox" id="f3">
-                  Info 3
-                </div>
-              </li>
-              <li>
-                <div class="circleFeature fStyle" data-cyrcleBox="f4">
-                  Ni
-                </div>
-                <div class="circleBox" id="f4">
-                  Info 4
-                </div>
-              </li>
+                <li>
+                  <div class="circleFeature fStyle" data-cyrcleBox="f1">
+                    Al
+                  </div>
+                  <div class="circleBox" id="f1">
+                    Info 1
+                  </div>
+                </li>
+                <li>
+                  <div class="circleFeature fStyle" data-cyrcleBox="f2">
+                    Zn
+                  </div>
+                  <div class="circleBox" id="f2">
+                    Info 2
+                  </div>
+                </li>
+                <li>
+                  <div class="circleFeature fStyle" data-cyrcleBox="f3">
+                    Sn
+                  </div>
+                  <div class="circleBox" id="f3">
+                    Info 3
+                  </div>
+                </li>
+                <li>
+                  <div class="circleFeature fStyle" data-cyrcleBox="f4">
+                    Ni
+                  </div>
+                  <div class="circleBox" id="f4">
+                    Info 4
+                  </div>
+                </li>
             </ul>
-          </div>
-        <div class="content">
-            <section class="subtitle-section hidden">
-                <h4>STEELINVEST, S.R.O.</h4>
-                <h2>Vitajte na stránke Steelinvest, s.r.o., váš spoľahlivý partner v dodávkach hliníka, zinku, niklu, cínu a ďalších kovov.</h2>
-                <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> Letná 11/45, 040 01 Košice, Slovensko</p>
-                    <p><i class="fas fa-phone"></i> +421 905 701 215</p>
-                    <p><i class="fas fa-envelope"></i><a href="mailto:steelinvest@steelinvest.eu" style="color: #373A40;">steelinvest@steelinvest.eu</a></p>
-                </div>
-            </section>
-            <section class="certificate-section hidden">
-              <h4>CERTIFIKÁT</h4>
-              <div class="certificate-content">
-                <img src="../images/ISO9001.jpeg" alt="Certifikát">
-                <h2>Naša spoločnosť je certifikovaná na splnenie medzinárodných štandardov kvality a spoľahlivosti. Steelinvest získal prestížny certifikát ISO 9001 pre skladovanie a dodávku neželezných kovov. Tento certifikát preukazuje našu oddanosť poskytovaniu konzistentne kvalitných produktov a služieb, zaisťovaniu spokojnosti zákazníkov a neustálemu zlepšovaniu našich procesov. Naše dodržiavanie noriem ISO 9001 zaručuje, že naše operácie spĺňajú najvyššie úrovne efektívnosti a účinnosti.</h2>
-              </div>  
-            </section>
         </div>
+          <section class="section hidden">
+            <h4>CERTIFIKÁT</h4>
+            <div class="certificate-content">
+              <img src="../images/ISO9001.jpeg" alt="Certifikát">
+              <h2>Naša spoločnosť je certifikovaná na splnenie medzinárodných štandardov kvality a spoľahlivosti. Steelinvest získal prestížny certifikát ISO 9001 pre skladovanie a dodávku neželezných kovov. Tento certifikát preukazuje našu oddanosť poskytovaniu konzistentne kvalitných produktov a služieb, zaisťovaniu spokojnosti zákazníkov a neustálemu zlepšovaniu našich procesov. Naše dodržiavanie noriem ISO 9001 zaručuje, že naše operácie spĺňajú najvyššie úrovne efektívnosti a účinnosti.</h2>
+            </div>  
+          </section>
+      </div>
     </main>
+    <div id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <footer>
         <p>&copy; 2024 Steelinvest s.r.o. Všetky práva vyhradené.</p>
@@ -107,20 +110,37 @@
             });
         });
         document.addEventListener("DOMContentLoaded", function () {
-            let observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    } else {
-                        entry.target.classList.remove("visible");
-                    }
-                });
-            }, { threshold: 0.1 });
+          let observer = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add("visible");
+                  } else {
+                      entry.target.classList.remove("visible");
+                  }
+              });
+          }, { threshold: 0.1 });
 
-            document.querySelectorAll(".hidden").forEach(section => {
-                observer.observe(section);
-            });
-        });
+          document.querySelectorAll(".hidden").forEach(section => {
+              observer.observe(section);
+          });
+
+          const scrollToTop = document.getElementById('scrollToTop');
+
+          window.addEventListener('scroll', function() {
+              if (window.scrollY > 100) {
+                  scrollToTop.style.display = 'block';
+              } else {
+                  scrollToTop.style.display = 'none';
+              }
+          });
+
+          scrollToTop.addEventListener('click', function() {
+              window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+              });
+          });
+      });
       </script>
 </body>
 

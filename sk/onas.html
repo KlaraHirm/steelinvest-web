@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steelinvest - O NÁS</title>
     <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/onas.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -29,7 +30,8 @@
           ['Russia'],
           ['Indonesia'],
           ['India'],
-          ['Georgia']
+          ['Georgia'],
+          ['Netherlands']
         ]);
 
         var options = {
@@ -72,14 +74,68 @@
         </ul>
     </nav>
     <main>
-        <section class="about-us">
-            <h1>O NÁS</h1>
-            <div id="regions_div" style="width: 900px; height: 500px;"></div>
-        </section>
+        <div class="content">
+          <section class="section onas hidden">
+              <h4>O NÁS</h4>
+              <h2>Steelinvest s.r.o. bola založená v roku 1998 ako obchodná firma s farebnými kovmi. Počas svojej existencie sa firma vyprofilovala ako spoľahlivý dodávateľ hliníka, zinku, niklu, cínu, medi a olova. S cieľom poskytnúť našim zákazníkom ešte lepšie služby a rýchlejšie dodávky, sme v priebehu rokov rozšírili naše kapacity o moderný sklad. Tento sklad nám umožňuje efektívnejšie riadiť zásoby a pružnejšie reagovať na potreby trhu, čím zvyšujeme spokojnosť našich zákazníkov. Neustále sa snažíme zlepšovať a držať krok s najnovšími trendmi a technológiami, a preto pravidelne navštevujeme najnovšie konferencie a odborné podujatia v našom odvetví.</h2>
+          </section>
+          <section class="section hidden">
+            <h4>PARTNERI</h4>
+            <div class="partners-content">
+              <h2>Počas našich dlhoročných skúseností v odvetví sme si vybudovali silné a spoľahlivé vzťahy s partnermi po celom svete. Naša globálna sieť spolupracovníkov a dodávateľov nám umožňuje poskytovať najvyššiu kvalitu služieb a produktov našim zákazníkom. Sme hrdí na naše partnerstvá, ktoré zahrnujú renomované firmy a organizácie v Európe, Ázii, na Blízkom východe a ďalších regiónoch. Tieto strategické spolupráce nám pomáhajú zabezpečiť neustály rast a inováciu, čo umožňuje nám a našim partnerom dosahovať spoločné úspechy.</h2>
+              <div id="regions_div"></div>
+            </div>
+          </section>
+          <section class="section hidden">
+            <h4>ŠTANDARDY</h4>
+            <div class="standards-content">
+              <h2>Držíme sa vysokých štandardov a sme hrdí na to, že sme získali certifikát ISO 9001:2015. Okrem toho máme zavedené špecifické normy a politiky ESG (Environmental, Social, and Governance), spolu s politikami na overenie dodávateľov. Každého nášho dodávateľa sme osobne navštívili, aby sme overili, že spĺňajú naše prísne štandardy.</h2>
+              <a href="../files/ISO-SteelinvestSK.pdf" target="_blank"><img src="../images/ISO-SteelinvestSK.jpg" alt="certifikát"></a>
+            </div>
+          </section>
+      </div>
     </main>
+    <div id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
     <footer>
         <p>&copy; 2024 Steelinvest s.r.o. Všetky práva vyhradené.</p>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          let observer = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add("visible");
+                  } else {
+                      entry.target.classList.remove("visible");
+                  }
+              });
+          }, { threshold: 0.1 });
+
+          document.querySelectorAll(".hidden").forEach(section => {
+              observer.observe(section);
+          });
+
+          const scrollToTop = document.getElementById('scrollToTop');
+
+          window.addEventListener('scroll', function() {
+              if (window.scrollY > 100) {
+                  scrollToTop.style.display = 'block';
+              } else {
+                  scrollToTop.style.display = 'none';
+              }
+          });
+
+          scrollToTop.addEventListener('click', function() {
+              window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+              });
+          });
+      });
+    </script>
 </body>
 
 </html>
