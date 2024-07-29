@@ -26,7 +26,7 @@
     position: relative;
 }
 
-.section::before{ 
+.section::before { 
     content: '';
     position: absolute;
     top: 0;
@@ -36,12 +36,29 @@
     border-top: 2px solid #FF7F00;
 }
 
+.steel {
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 95px; 
+    position: relative;
+}
+
+.steel::before { 
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 0;
+    border-bottom: 2px solid #FF7F00;
+}
+
 .contact-info {
     margin: 35px;
 }
 
 .section .contact-info p {
-    margin: 3px 0; 
+    margin: 3px 0 0 0; 
     display: flex;
     align-items: center;
 }
@@ -56,8 +73,4 @@
     height: auto;
     max-width: 25%;
     object-fit: cover;
-}
-
-.certificate-content h2 {
-    margin-top: 0;
 }

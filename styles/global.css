@@ -112,6 +112,12 @@ h2 {
     font-weight: 400;
     text-align: left;
     margin: 35px;
+    margin-left: 20px;
+}
+
+p {
+    margin-left: 20px;
+    text-align: left;
 }
 
 .hidden {

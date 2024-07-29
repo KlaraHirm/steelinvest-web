@@ -36,6 +36,15 @@
     gap: 20px;
 }
 
+.partners-content p {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.partners-content h2 {
+    margin-left: 20px;
+}
+
 .standards-content {
     display: flex;
     align-items: center;
