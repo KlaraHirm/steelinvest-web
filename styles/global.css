@@ -132,10 +132,14 @@ p {
 }
 
 footer {
-    background-color: #333333; /* Tmavosivá farba pozadia */
-    color: #EEEEEE; /* Svetlosivá farba textu */
+    background-color: #333333;
+    color: #EEEEEE;
     text-align: center;
     padding: 5px 0;
+}
+
+footer p {
+    text-align: center;
 }
 
 .scroll-to-top {
@@ -144,7 +148,7 @@ footer {
     right: 20px;
     width: 40px;
     height: 40px;
-    background-color: transparent; /* Adjust color as needed */
+    background-color: transparent;
     color: #FF7F00;
     border: 2px solid #FF7F00;
     text-align: center;
@@ -152,7 +156,7 @@ footer {
     font-size: 24px;
     border-radius: 50%;
     cursor: pointer;
-    display: none; /* Initially hidden */
+    display: none;
     z-index: 1000;
 }
 
