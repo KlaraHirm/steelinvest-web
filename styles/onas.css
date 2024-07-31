@@ -75,6 +75,11 @@
     width: 100%;
 }
 
+.map{
+    width: 70%;
+    height: auto;
+}
+
 @media (max-width: 1100px) {
     .standards-content {
         flex-direction: column;
