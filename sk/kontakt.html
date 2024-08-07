@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steelinvest</title>
     <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/kontakt.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../responsive-circle-infographic/src/s8CyrcleInfoBox.css">
     <script src="../responsive-circle-infographic/src/s8CyrcleInfoBox.js"></script>
@@ -39,6 +40,27 @@
     </nav>
 
     <main>
+        <div class="content">
+            <section class="kontakt hidden">
+                <h4>KONTAKTNÉ ÚDAJE</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Letná 11/45, 040 01 Košice, Slovensko</p>
+                <p><i class="fas fa-phone"></i> +421 905 701 215</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:steelinvest@steelinvest.eu" style="color: #373A40;">steelinvest@steelinvest.eu</a></p>
+            </section>
+            <section class="section hidden">
+                <h4>FAKTURAČNÉ ÚDAJE</h4>
+                <p><i class="fas fa-solid fa-id-badge"></i> IČO: 36181623</p>
+                <p><i class="fas fa-solid fa-file-invoice"></i> IČ DPH: SK2020057523</p>
+                <p><i class="fas fa-solid fa-barcode"></i> DUNS: </p>
+            </section>
+            <section class="section hidden">
+                <h4>BANKOVÉ SPOJENIA</h4>
+                <p><i class="fas fa-university"></i> Slovenská sporiteľňa, as</p>
+                <p><i class="fas fa-credit-card"></i> Číslo účtu: 0446805604/0900</p>
+                <p><i class="fas fa-globe"></i> IBAN: SK63 0900 0000 0004 4680 5604</p>
+                <p><i class="fas fa-exchange-alt"></i> SWIFT: GIBASKBX</p>
+            </section>
+        </div>
     </main>
     <div id="scrollToTop" class="scroll-to-top">
         <i class="fas fa-arrow-up"></i>
@@ -47,6 +69,41 @@
     <footer>
         <p>&copy; 2024 Steelinvest s.r.o. Všetky práva vyhradené.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    } else {
+                        entry.target.classList.remove("visible");
+                    }
+                });
+            }, { threshold: 0.1 });
+  
+            document.querySelectorAll(".hidden").forEach(section => {
+                observer.observe(section);
+            });
+  
+            const scrollToTop = document.getElementById('scrollToTop');
+  
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    scrollToTop.style.display = 'block';
+                } else {
+                    scrollToTop.style.display = 'none';
+                }
+            });
+  
+            scrollToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+      </script>
 </body>
 
 </html>
