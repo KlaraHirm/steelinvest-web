@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steelinvest</title>
     <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/downloads.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -18,11 +19,11 @@
         <div class="container">
             <img src="../images/SteelInvestCMYK-removebg.png" alt="Steelinvest logo">
             <div class="language-selector">
-                <a href="../ru/index.html">RU</a>
+                <a href="../ru/downloads.html">RU</a>
                 <span>|</span>
-                <a href="../en/index.html">EN</a>
+                <a href="../en/downloads.html">EN</a>
                 <span>|</span>
-                <a href="../sk/index.html" class="active">SK</a>
+                <a href="../sk/downloads.html" class="active">SK</a>
             </div>
         </div>
     </header>
@@ -40,6 +41,16 @@
 
     <main>
     </main>
+    <div class="content">
+        <section class="vdp hidden">
+            <h4>VŠEOBECNÉ DODACIE PODMIENKY</h4>
+            <embed src="../files/Steelinvest, s.r.o. | VDP.pdf" width="100%" height="600px" type="application/pdf">
+        </section>
+        <section class="section hidden">
+            <h4>ISO 9001:2015</h4>
+            <embed src="../files/Steelinvest, s.r.o. | ISO certificate.pdf" width="100%" height="600px" type="application/pdf">
+        </section>
+    </div>
     <div id="scrollToTop" class="scroll-to-top">
         <i class="fas fa-arrow-up"></i>
     </div>
@@ -47,6 +58,45 @@
     <footer>
         <p>&copy; 2024 Steelinvest s.r.o. Všetky práva vyhradené.</p>
     </footer>
+    <script>
+        $(function(){ 
+             $(".infographic").s8CircleInfoBox({
+                 spreadStyle:"top",
+             });
+         });
+         document.addEventListener("DOMContentLoaded", function () {
+           let observer = new IntersectionObserver((entries, observer) => {
+               entries.forEach(entry => {
+                   if (entry.isIntersecting) {
+                       entry.target.classList.add("visible");
+                   } else {
+                       entry.target.classList.remove("visible");
+                   }
+               });
+           }, { threshold: 0.1 });
+ 
+           document.querySelectorAll(".hidden").forEach(section => {
+               observer.observe(section);
+           });
+ 
+           const scrollToTop = document.getElementById('scrollToTop');
+ 
+           window.addEventListener('scroll', function() {
+               if (window.scrollY > 100) {
+                   scrollToTop.style.display = 'block';
+               } else {
+                   scrollToTop.style.display = 'none';
+               }
+           });
+ 
+           scrollToTop.addEventListener('click', function() {
+               window.scrollTo({
+                   top: 0,
+                   behavior: 'smooth'
+               });
+           });
+       });
+       </script>
 </body>
 
 </html>

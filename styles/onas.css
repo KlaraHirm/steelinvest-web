@@ -1,3 +1,15 @@
+.BIR {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.BIR img {
+    height: auto;
+    max-width: 25%;
+    object-fit: cover;
+}
+
 .partners-content {
     display: flex;
     flex-direction: column;

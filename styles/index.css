@@ -19,23 +19,6 @@
     font-size: large;
 }
 
-.section {
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 95px; 
-    position: relative;
-}
-
-.section::before { 
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25%;
-    height: 0;
-    border-top: 2px solid #FF7F00;
-}
-
 .steel {
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -66,6 +49,7 @@
 
 .certificate-content {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: 20px;
 }
@@ -74,4 +58,14 @@
     height: auto;
     max-width: 25%;
     object-fit: cover;
+}
+
+.certificate-content div {
+    display: flex;
+    flex-direction: row;
+}
+
+.certificate-content div div {
+    display: flex;
+    flex-direction: column;
 }
