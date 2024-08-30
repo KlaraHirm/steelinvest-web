@@ -19,6 +19,19 @@
     font-size: large;
 }
 
+.circleBox {
+    align-items: center;
+} 
+
+.circleBox img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 50%;
+}
+
 .steel {
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
