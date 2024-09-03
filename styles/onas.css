@@ -61,7 +61,7 @@
     height: auto;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
     .standards-content {
         flex-direction: column;
     }
@@ -69,5 +69,19 @@
     .standards-content img {
         width: auto;
         max-width: 100%;
+    }
+
+    .BIR, .MetalRadar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .BIR img, .MetalRadar img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .BIR p, .MetalRadar p {
+        margin-left: 0;
     }
 }
