@@ -98,4 +98,8 @@
     .BIR p, .MetalRadar p {
         margin-left: 0;
     }
+
+    .map-content {
+        flex-direction: column;
+    }
 }
