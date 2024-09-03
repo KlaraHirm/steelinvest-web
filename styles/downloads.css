@@ -13,3 +13,11 @@
     width: 25%;
     height: 0;
 }
+
+.content a {
+    color: #FF7F00;
+}
+
+h4 {
+    text-align: center;
+}
