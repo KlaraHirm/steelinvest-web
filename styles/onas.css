@@ -1,12 +1,12 @@
-.BIR {
+.BIR, .MetalRadar {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.BIR img {
+.BIR img, .MetalRadar img {
     height: auto;
-    max-width: 25%;
+    max-width: 100%;
     object-fit: cover;
 }
 
