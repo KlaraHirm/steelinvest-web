@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steelinvest - ABOUT US</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/onas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="../images/SteelInvestCMYK-removebg.png" alt="Steelinvest logo">
+            <div class="language-selector">
+              <a href="../sk/onas.html">SK</a>
+              <span>|</span>
+              <a href="../en/about.html" class="active">EN</a>
+              <span>|</span>
+              <a href="../ru/index.html">RU</a>
+          </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html" class="active">ABOUT US</a></li>
+            <li><a href="offer.html">OFFER</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="downloads.html">DOWNLOADS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="content">
+          <section class="section onas hidden">
+              <h4>ABOUT US</h4>
+              <h2>Steelinvest, s.r.o. was established in 1998 as a company trading in non-ferrous metals. Over the years, the company has developed into a reliable supplier of aluminum, aluminum alloys, copper, brass, lead, zinc, and other non-ferrous metals.</h2>
+              <p>With the aim of providing our customers with even better services and faster deliveries, we have expanded our capacities over the years with a warehouse to ensure reliable just-in-time deliveries for our European clients. This warehouse allows us to manage inventory more efficiently and respond more flexibly to market needs, thereby increasing customer satisfaction. We constantly strive to improve and keep up with the latest trends and technologies, and therefore regularly attend the latest conferences and industry events in our field.</p>
+              <div class="BIR">
+                <img src="../images/BIR_Logo.png" alt="BIR">
+                <p>Additionally, we are members of <strong>BIR (Bureau of International Recycling)</strong>, which underlines our commitment to responsible and sustainable metal trading. We regularly participate in BIR conferences to keep up with the latest trends and best practices in the recycling industry.</p>
+              </div>
+              <div class="MetalRadar">
+                <img src="../images/MetalRadar.png" alt="MetalRadar">
+                <p>We actively subscribe to reports from <strong>MetalRadar</strong> to stay informed about the latest developments and trends in our industry. Thanks to MetalRadar, we can monitor the latest market movements and make informed decisions that support our commitment to efficient and sustainable metal trading.</p>
+            </div>
+          </section>
+          <section class="section hidden">
+            <h4>PARTNERS</h4>
+            <div class="partners-content">
+              <div>
+                <h2>Throughout our many years of experience in the industry, we have built strong and reliable relationships with partners around the world. Our global network of collaborators and suppliers allows us to provide the highest quality services and products to our customers.</h2>
+                <p>We are proud of our partnerships, which include reputable companies and organizations in Europe, Asia, the Middle East, and other regions. These strategic collaborations help us ensure continuous growth and innovation, enabling us and our partners to achieve shared successes.</p>
+              </div>
+              <div class="map-content">
+                <div class="text-column">
+                  <p>More than</p>
+                  <h2>100 +</h2>
+                  <p>satisfied customers worldwide.</p>
+                </div>
+                <img src="../images/MapChart_Map.png" alt="Map with our partners" class="map">
+              </div>
+            </div>
+          </section>
+          <section class="section hidden">
+            <h4>STANDARDS</h4>  
+            <div class="standards-content">
+              <div>
+                <h2>We adhere to high standards and are proud to have achieved ISO 9001:2015 and REACH certifications. We are also proud members of the BIR organization. Additionally, we have implemented specific ESG (Environmental, Social, and Governance) standards and policies, along with KYS (Know Your Supplier) supplier verification policies.</h2>
+                <p>We regularly visit each of our suppliers in person to verify that they consistently meet our stringent standards.</p>  
+            </div>
+              <a href="../files/Steelinvest, s.r.o. | ISO certificate.pdf" target="_blank"><img src="../images/ISO-SK-do2025.jpg" alt="certificate"></a>
+              <a href="../files/Steelinvest, s.r.o. | BIR.pdf" target="_blank"><img src="../images/BIR certifikat.png" alt="certificate"></a>
+            </div>
+          </section>
+      </div>
+    </main>
+    <div id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <footer>
+        <p>&copy; 2024 Steelinvest s.r.o. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          let observer = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add("visible");
+                  } else {
+                      entry.target.classList.remove("visible");
+                  }
+              });
+          }, { threshold: 0.1 });
+
+          document.querySelectorAll(".hidden").forEach(section => {
+              observer.observe(section);
+          });
+
+          const scrollToTop = document.getElementById('scrollToTop');
+
+          window.addEventListener('scroll', function() {
+              if (window.scrollY > 100) {
+                  scrollToTop.style.display = 'block';
+              } else {
+                  scrollToTop.style.display = 'none';
+              }
+          });
+
+          scrollToTop.addEventListener('click', function() {
+              window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+              });
+          });
+      });
+    </script>
+</body>
+
+</html>

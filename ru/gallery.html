@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steelinvest - Galéria</title>
+    <title>Steelinvest - Галерея</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/galeria.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -15,74 +15,74 @@
 <body>
     <header>
         <div class="container">
-            <img src="../images/SteelInvestCMYK-removebg.png" alt="Steelinvest logo">
+            <img src="../images/SteelInvestCMYK-removebg.png" alt="Логотип Steelinvest">
             <div class="language-selector">
-                <a href="../sk/galeria.html" class="active">SK</a>
+                <a href="../sk/galeria.html">SK</a>
                 <span>|</span>
                 <a href="../en/gallery.html">EN</a>
                 <span>|</span>
-                <a href="../ru/gallery.html">RU</a>
+                <a href="../ru/gallery.html" class="active">RU</a>
             </div>
         </div>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">DOMOV</a></li>
-            <li><a href="onas.html">O NÁS</a></li>
-            <li><a href="ponuka.html">PONUKA</a></li>
-            <li><a href="galeria.html" class="active">GALÉRIA</a></li>
-            <li><a href="downloads.html">DOWNLOADS</a></li>
-            <li><a href="kontakt.html">KONTAKT</a></li>
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="about.html">О НАС</a></li>
+            <li><a href="offer.html">ПРЕДЛОЖЕНИЕ</a></li>
+            <li><a href="gallery.html" class="active">ГАЛЕРЕЯ</a></li>
+            <li><a href="downloads.html">ЗАГРУЗКИ</a></li>
+            <li><a href="contact.html">КОНТАКТЫ</a></li>
         </ul>
     </nav>
 
     <main>
         <div class="gallery-container">
             <div class="gallery-item">
-                <img src="../images/photo1.jpg">
+                <img src="../images/photo1.jpg" alt="Галерея Изображение 1">
             </div>
             <div class="gallery-item">
-                <img src="../images/photo2.jpg">
+                <img src="../images/photo2.jpg" alt="Галерея Изображение 2">
             </div>
             <div class="gallery-item">
-                <img src="../images/photo3.jpg">
+                <img src="../images/photo3.jpg" alt="Галерея Изображение 3">
             </div>
             <div class="gallery-item">
-                <img src="../images/photoAlu.jpg">
+                <img src="../images/photoAlu.jpg" alt="Галерея Изображение 4">
             </div>
             <div class="gallery-item">
-                <img src="../images/photoCu.jpg">
+                <img src="../images/photoCu.jpg" alt="Галерея Изображение 5">
             </div>
             <div class="gallery-item">
-                <img src="../images/photo4.JPG">
+                <img src="../images/photo4.JPG" alt="Галерея Изображение 6">
             </div>
             <div class="gallery-item">
-                <img src="../images/photo5.jpg">
+                <img src="../images/photo5.jpg" alt="Галерея Изображение 7">
             </div>
             <div class="gallery-item">
-                <img src="../images/Pbfoto.jpg">
+                <img src="../images/Pbfoto.jpg" alt="Галерея Изображение 8">
             </div>
             <div class="gallery-item">
-                <img src="../images/photo6.JPG">
+                <img src="../images/photo6.JPG" alt="Галерея Изображение 9">
             </div>
             <div class="gallery-item">
-                <img src="../images/photo7.JPG">
+                <img src="../images/photo7.JPG" alt="Галерея Изображение 10">
             </div>
             <div class="gallery-item">
-                <img src="../images/Zn-photo.jpg">
+                <img src="../images/Zn-photo.jpg" alt="Галерея Изображение 11">
             </div>
             <div class="gallery-item">
-                <img src="../images/photo8.jpg">
+                <img src="../images/photo8.jpg" alt="Галерея Изображение 12">
             </div>
             <div class="gallery-item">
-                <img src="../images/photo9.jpg">
+                <img src="../images/photo9.jpg" alt="Галерея Изображение 13">
             </div>
             <div class="gallery-item">
-                <img src="../images/photo10.jpg">
+                <img src="../images/photo10.jpg" alt="Галерея Изображение 14">
             </div>
             <div class="gallery-item">
-                <img src="../images/photo11.jpg">
+                <img src="../images/photo11.jpg" alt="Галерея Изображение 15">
             </div>
         </div>
     </main>
@@ -97,12 +97,12 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Steelinvest s.r.o. Všetky práva vyhradené.</p>
+        <p>&copy; 2024 Steelinvest s.r.o. Все права защищены.</p>
     </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // IntersectionObserver for visibility detection
+            // IntersectionObserver для определения видимости
             let observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -117,7 +117,7 @@
                 observer.observe(section);
             });
     
-            // Scroll to top functionality
+            // Функция прокрутки вверх
             const scrollToTop = document.getElementById('scrollToTop');
     
             window.addEventListener('scroll', function() {
@@ -135,7 +135,7 @@
                 });
             });
     
-            // Lightbox functionality for image enlargement
+            // Функционал увеличения изображений (лайтбокс)
             const modal = document.getElementById("imageModal");
             const modalImg = document.getElementById("modalImage");
             const captionText = document.getElementById("caption");
